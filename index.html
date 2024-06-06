@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>RINTEIR</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#">О нас</a>
+                <a href="#">Вопросы и ответы</a>
+                <a href="#">Преимущества</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <div class="cart">
+                <button id="cartButton">
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="top">
+                <h2>Корзина</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="cartItems">
+            </div>
+            <div id="cartTotal" class="cart-total">
+            </div>
+            <div class="cart-buttons">
+                <button id="clearCartButton">Очистить корзину</button>
+                <button id="continueShoppingButton">Продолжить покупки</button>
+                <button id="checkoutButton">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="productInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="productInfoTitle">Информация о товаре</h2>
+            <div class="top_2">
+                <img id="productInfoImage" src="" alt="Product Image">
+                <div id="productInfoDescription">Описание товара</div>
+                <p id="productInfoPrice"></p>
+            </div>
+            <button id="addToCartFromModal"> + Добавить в корзину</button>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="hero-slide active">
+            <img src="IMG/Rectangle 5.png" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h2>Первый слайд</h2>
+                <p>Описание первого слайда</p>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="IMG/9zy85xfb.png" alt="Hero Image 2" class="hero-image">
+            <div class="hero-text">
+                <h2>Второй слайд</h2>
+                <p>Описание второго слайда</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=" content">
+        <aside class="sidebar">
+            <div class="category-dropdown">
+                <img src="IMG/s-l1600 копия.png" alt="">
+                <button class="category-dropdown-button">Выбрать категорию</button>
+                <div class="category-dropdown-content">
+                    <a href="#">Категория 1</a>
+                    <a href="#">Категория 2</a>
+                    <a href="#">Категория 3</a>
+                    <a href="#">Категория 4</a>
+                    <a href="#">Категория 5</a>
+                    <a href="#">Категория 6</a>
+                    <a href="#">Категория 7</a>
+                </div>
+            </div>
+            <section class="filter">
+                <h2>Фильтр</h2>
+                <div class="filter-section">
+                    <h3 for="price">Цена</h3>
+                    <input type="range" id="price" name="price" min="0" max="60000"
+                        oninput="document.getElementById('priceValue').innerText = this.value">
+                    <span id="priceValue">0</span> ₸
+                </div>
+                <div class="filter-section">
+                    <h3 for="color">Цвет</h3>
+                    <div class="top">
+                        <div>
+                            <input type="radio" id="white" name="color" value="белый">
+                            <label for="white">Белый</label>
+                            <input type="radio" id="black" name="color" value="черный">
+                            <label for="black">Черный</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>RGB подсветка</h3>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-none" name="rgb" value="нет">
+                        <label for="rgb-none">Нет</label>
+                    </div>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-yes" name="rgb" value="есть">
+                        <label for="rgb-yes">Есть</label>
+                    </div>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-custom" name="rgb" value="настраиваемая">
+                        <label for="rgb-custom">Настраиваемая</label>
+                    </div>
+                </div>
+                <button id="applyFilters">Применить</button>
+            </section>
+        </aside>
+        <main class="main-content">
+            <section class="products">
+                <h2>Каталог</h2>
+                <div class="product-grid">
+                    <div class="product-item" data-title="ID-COOLING SE-914-XT-Basic" data-price="9287"
+                        data-color="черный" data-rgb="есть" data-image="IMG/Rectangle 40.png" data-features='[
+                                                            "Тип: Кулер для процессора",
+                                                            "Сокет: LGA1150, LGA1151, LGA1155, LGA1156, LGA1200, LGA2011, LGA2066, AM4",
+                                                            "Максимальный TDP процессора, Вт: 150",
+                                                            "Диаметр вентилятора, мм: 92",
+                                                            "Максимальная скорость вращения, обор./мин.: 2200",
+                                                            "Возможность регулирования оборотов: Есть",
+                                                            "Максимальный уровень шума, дБ: 25.8",
+                                                            "Высота кулера, мм: 127",
+                                                            "Коннектор: 4 pin",
+                                                            "Воздушный поток: 45.8 CFM"
+                                                        ]'>
+                        <img src="IMG/Rectangle 40.png" alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">ID-COOLING SE-914-XT-Basic</a></p>
+                            <p class="category"><a href="#"></a>Системы охлаждения</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">9 287 ₸</p>
+                            <button class="add-to-cart" data-price="9287" data-title="ID-COOLING SE-914-XT-Basic"
+                                data-image="IMG/Rectangle 40.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Intel Core i5 12400F OEM" data-price="59000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="IMG/Intel Core i5 12400F OEM.png" alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Intel Core i5 12400F OEM</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">59 000 ₸</p>
+                            <button class="add-to-cart" data-price="59000" data-title="Intel Core i5 12400F OEM"
+                                data-image="IMG/Intel Core i5 12400F OEM.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Intel Сore i7-11700F OEM" data-price="59000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://i0.wp.com/pcmarket.uz/wp-content/uploads/2021/04/INTEL-Core-i7-11700F-5034952245.png?fit=650%2C650&ssl=1"
+                            alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Intel Сore i7-11700F OEM</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">99 000 ₸</p>
+                            <button class="add-to-cart" data-price="59000" data-title="Intel Сore i7-11700F OEM"
+                                data-image="https://i0.wp.com/pcmarket.uz/wp-content/uploads/2021/04/INTEL-Core-i7-11700F-5034952245.png?fit=650%2C650&ssl=1">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Kingston 32 4x8GB" data-price="34000" data-color="белый"
+                        data-rgb="нет">
+                        <img src="https://ddtech.mx/assets/uploads/518a6b00b54881147c17779df51b1208.png"
+                            alt="Product 2">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston 32 4x8GB</a></p>
+                            <p class="category"><a href="#"></a>Оперативная память</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">88 000 ₸</p>
+                            <button class="add-to-cart" data-price="34000" data-title="Kingston 32 4x8GB"
+                                data-image="https://ddtech.mx/assets/uploads/518a6b00b54881147c17779df51b1208.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="GIGABYTE GeForce RTX 4060 Ti" data-price="200000"
+                        data-color="черный" data-rgb="настраиваемая">
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/24270b88bee9db9541065889d1b5cf8b/Product/35327/Png"
+                            alt="Product 3">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE GeForce RTX 4060 Ti</a></p>
+                            <p class="category"><a href="#"></a>Видеокарты</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">230 000 ₸</p>
+                            <button class="add-to-cart" data-price="200000" data-title="GIGABYTE GeForce RTX 4060 Ti"
+                                data-image="https://static.gigabyte.com/StaticFile/Image/Global/24270b88bee9db9541065889d1b5cf8b/Product/35327/Png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Kingston SEDC500M/480G" data-price="50000" data-color="черный"
+                        data-rgb="нет">
+                        <img src="https://qwertyshop.ua/uploads/product/2019-7-3/magazin-qwertyshop-kingston-dc500m-480gb-sataiii-3d-tlc-sedc500m-480g.png"
+                            alt="Product 4">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston SEDC500M/480G</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">50 000 ₸</p>
+                            <button class="add-to-cart" data-price="50000" data-title="Kingston SEDC500M/480G"
+                                data-image="https://qwertyshop.ua/uploads/product/2019-7-3/magazin-qwertyshop-kingston-dc500m-480gb-sataiii-3d-tlc-sedc500m-480g.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="product-item" data-title="GIGABYTE H610M S2H" data-price="40000" data-color="черный"
+                        data-rgb="есть">
+                        <img src="https://www.gigabyte.com/Image/266/Product/34303/png" alt="Product 5">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE H610M S2H</a></p>
+                            <p class="category"><a href="#"></a>Материнские платы</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">41 000 ₸</p>
+                            <button class="add-to-cart" data-price="40000" data-title="GIGABYTE H610M S2H"
+                                data-image="https://www.gigabyte.com/Image/266/Product/34303/png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="SSD Netac NV3000 1000 Гб" data-price="35000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://i.otzovik.com/objects/b/2160000/2157136.png" alt="Product 6">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">SSD Netac NV3000 1000 Гб</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">35 000 ₸</p>
+                            <button class="add-to-cart" data-price="35000" data-title="SSD Netac NV3000 1000 Гб"
+                                data-image="https://i.otzovik.com/objects/b/2160000/2157136.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="GIGABYTE U4 UD" data-price="150000" data-color="серый"
+                        data-rgb="настраиваемая">
+                        <img src="https://pcscomputers.com.ph/wp-content/uploads/2021/12/1-6.png" alt="Product 7">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE U4 UD</a></p>
+                            <p class="category"><a href="#"></a>Ноутбуки</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">260 000 ₸</p>
+                            <button class="add-to-cart" data-price="150000" data-title="GIGABYTE U4 UD"
+                                data-image="https://pcscomputers.com.ph/wp-content/uploads/2021/12/1-6.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="product-item" data-title="Kingston DTXM/256GB 256 Гб" data-price="12000"
+                        data-color="черный" data-rgb="есть">
+                        <img src="https://cdn-reichelt.de/bilder/web/xxl_ws/E300/KINGSTON_DTXM_256GB_03.png"
+                            alt="Product 8">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston DTXM/256GB 256 Гб</a></p>
+                            <p class="category"><a href="#"></a>Флэш-накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">7 500 ₸</p>
+                            <button class="add-to-cart" data-price="12000" data-title="Kingston DTXM/256GB 256 Гб"
+                                data-image="https://cdn-reichelt.de/bilder/web/xxl_ws/E300/KINGSTON_DTXM_256GB_03.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title=" ARCTIC Liquid Freezer II - 240 A-RGB" data-price="8000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://lh5.googleusercontent.com/proxy/wI3FUdpwz8qqe7ZP-hj2pI073Zsmt2GFhzB5XWydSRNj17-LQar14o-NaCpUehbFXQN4qt9T-_MnUVyJy9jrxh0diD_7LOdGzkwF5IutVAv28hFBCtReKlDPpjn7wHGx_bBq3A"
+                            alt="Product 9">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link"> ARCTIC Liquid Freezer II - 240 A-RGB</a></p>
+                            <p class="category"><a href="#"></a>Системы охлаждения</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">8 000 ₸</p>
+                            <button class="add-to-cart" data-price="8000"
+                                data-title=" ARCTIC Liquid Freezer II - 240 A-RGB"
+                                data-image="https://lh5.googleusercontent.com/proxy/wI3FUdpwz8qqe7ZP-hj2pI073Zsmt2GFhzB5XWydSRNj17-LQar14o-NaCpUehbFXQN4qt9T-_MnUVyJy9jrxh0diD_7LOdGzkwF5IutVAv28hFBCtReKlDPpjn7wHGx_bBq3A">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Seagate Barracuda 2TB" data-price="18000" data-color="зеленый"
+                        data-rgb="нет">
+                        <img src="IMG/Seagate Barracuda 2TB.png" alt="Product 10">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Seagate Barracuda 2TB</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">18 000 ₸</p>
+                            <button class="add-to-cart" data-price="18000" data-title="Seagate Barracuda 2TB"
+                                data-image="IMG/Seagate Barracuda 2TB.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="product-item" data-title="Corsair HX850i" data-price="25000" data-color="черный"
+                        data-rgb="есть">
+                        <img src="IMG/Corsair HX850i.png" alt="Product 11">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Corsair HX850i</a></p>
+                            <p class="category"><a href="#"></a>Блоки питания</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">25 000 ₸</p>
+                            <button class="add-to-cart" data-price="25000" data-title="Corsair HX850i"
+                                data-image="IMG/Corsair HX850i.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="AMD Ryzen 7 5800X" data-price="120000" data-color="черный"
+                        data-rgb="нет">
+                        <img src="IMG/AMD Ryzen 7 5800X.png" alt="Product 12">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">AMD Ryzen 7 5800X</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">120 000 ₸</p>
+                            <button class="add-to-cart" data-price="120000" data-title="AMD Ryzen 7 5800X"
+                                data-image="IMG/AMD Ryzen 7 5800X.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="G.Skill Trident Z RGB 32GB" data-price="45000"
+                        data-color="черный" data-rgb="настраиваемая">
+                        <img src="IMG/G.Skill Trident Z RGB 32GB.png" alt="Product 13">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">G.Skill Trident Z RGB 32GB</a></p>
+                            <p class="category"><a href="#"></a>Оперативная память</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">45 000 ₸</p>
+                            <button class="add-to-cart" data-price="45000" data-title="G.Skill Trident Z RGB 32GB"
+                                data-image="IMG/G.Skill Trident Z RGB 32GB.png">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="pagination">
+                <a href="#">«</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">»</a>
+            </div>
+        </main>
+    </div>
+
+    <div class="info">
+        <div class="ttle">
+            <h1>Доставка</h1>
+            <h1>Оплата</h1>
+            <h1>Гарантия</h1>
+        </div>
+        <div class="QandA">
+            <div class="Qa ab">
+                <p>Доставка осуществяется по городу Алматы</p>
+                <p>с 10:00 до 18:00</p>
+            </div>
+            <div class="Qa">
+                <p>Оплата Kaspi QR</p>
+                <p>Оплата на товары выше 100 000 тг осуществляется заранее</p>
+            </div>
+            <div class="Qa">
+                <p>Гарантия магазина 2 недели на все виды товаров</p>
+                <p>Сроки гарантии производителя уточняйте в карточке товара</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ac">
+            <div class="logo">
+                <h1>RINTEIR</h1>
+            </div>
+            <div class="aaa">
+                <h2>Контакты: +7 777 777 7777</h2>
+            </div>
+            <div class="aaa">
+                <h2>Адрес: Дуйсенова 25
+                </h2>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script_cart.js"></script>
+    <script src="script_slidebar.js"></script>
+    <script src="script_modal_info-product.js"></script>
+    <script src="script_filter.js"></script>
+
+
+</body>
+
+</html>

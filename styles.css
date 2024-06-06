@@ -1,0 +1,647 @@
+/* styles.css */
+@font-face { 
+  font-family: "Conthrax"; 
+  src: url("Fonts/conthrax-sb.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+@font-face { 
+  font-family: "play"; 
+  src: url("Fonts/Play-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+
+body {
+    font-family: "play";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url(IMG/7f88f5e86bfccd928022606df49f2a4e.jpg);
+    background-size: cover;
+}
+
+header {
+    color: white;
+    background-color: #12173ea1;
+    font-weight: 200;
+}
+
+.header-container {
+    display: flex;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: "Conthrax";
+}
+.main-nav {
+    background-color: #12173E;
+    padding: 20px;
+    width: 60%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.cart img {
+    width: 50px;
+    height: 50px;
+}
+#cartButton {
+    border: none;
+    background: url(IMG/shopping-bag\ \(1\)\ 1.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#cartButton:hover {
+    border: none;
+    background: url(IMG/shopping-bag.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.hero {
+    position: relative;
+    height: 800px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero .active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero .inactive {
+    opacity: 0;
+    z-index: 0;
+}
+
+.hero-text {
+    text-align: right;
+    position: absolute;
+    top: 40%; 
+    right: 10%; 
+    transform: translateY(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 50px;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero-slide:not(.active) {
+    display: none;
+}
+
+.content {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+
+/*каталог */
+.main-content {
+    width: 100%;
+    color: white;
+}
+
+.products {
+    background-color: #12173e6e;
+    display: block;
+}
+
+.products h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #12173E;
+    height: 50px;
+    padding: 20px 0;
+    font-size: 40px;
+    margin: 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+}
+
+.product-item {
+    width: calc(31% - 20px);
+    height: 450px;
+    background: linear-gradient(to bottom right, rgba(0, 173, 255, 0.7), rgba(15, 52, 96, 0.7));
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(#64FFFF, #12173E);
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+    max-width: 80%;
+    max-height: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item a {
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Conthrax";
+}
+.product-item .price {
+    font-family: "Conthrax";
+    font-size: 30px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.add-to-cart {
+    font-size: 50px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #64ffff7c;
+    transition: color 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.add-to-cart:hover {
+    color: #64FFFF;
+}
+
+.price-add-to-cart {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.info-product {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.493);
+}
+
+.product-item p {
+    margin: 10px 0;
+}
+
+.product-item button {
+    font-size: 80px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s; /* Добавлен переход для изменения цвета */
+    background-color: #00000000;
+    float: right;
+}
+
+
+
+
+.pagination {
+    background-color: #12173E;
+    padding: 20px;
+    text-align: center;
+}
+.pagination a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #a1a1a1;
+    font-weight: 600;
+    font-family: "Conthrax";
+    font-size: 20px;
+}
+.pagination a:hover {
+    color: white;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/*для окна корзины */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    color: white;
+    font-size: larger;
+}
+
+.modal-content {
+    background: linear-gradient(#64ffffbd, #12173ea2);
+    margin: 15% auto;
+    padding: 10px 50px 50px 50px;
+    border: 5px solid #64FFFF;
+    width: 80%; 
+    display: block;
+}
+
+#cartItems {
+    display: flex;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px; /* Расстояние между товарами */
+    padding: 10px;
+    background-color: #12173ed3;
+}
+
+.cart-item-image {
+    max-width: 100px; /* Максимальная ширина изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+.cart-item-info {
+    margin-left: 20px; /* Отступ от изображения */
+}
+
+.cart-item-info h4 {
+    margin: 0; /* Убираем отступы */
+}
+
+.cart-item-info p {
+    margin: 5px 0; /* Небольшой отступ для информации о товаре */
+}
+
+.close {
+    color: #12173E;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #64FFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.top {
+    display: flex; /* Размещаем кнопки в строку */
+    justify-content: space-between; /* Равномерно распределяем пространство между кнопками */
+    align-items: center;
+}
+
+.cart-buttons {
+    display: flex; /* Размещаем кнопки в строку */
+    justify-content: space-between; /* Равномерно распределяем пространство между кнопками */
+    margin-top: 20px; /* Добавляем отступ сверху, если нужно */
+}
+
+.cart-buttons button {
+    padding: 10px 20px; /* Задаем отступы внутри кнопок */
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    font-weight: 600; /* Делаем шрифт жирным */
+    border: none; /* Убираем границы кнопок */
+    cursor: pointer; /* Меняем курсор при наведении на кнопку */
+    border-radius: 5px; /* Скругляем углы кнопок */
+    transition: background-color 0.3s; /* Добавляем плавное изменение цвета при наведении */
+}
+#clearCartButton {
+    background-color: #2a7e7e; /* Цвет фона кнопки "Оформить заказ" */
+    color: white; /* Цвет текста кнопки "Оформить заказ" */
+}
+
+#clearCartButton:hover {
+    background-color: #64FFFF; 
+} 
+
+#checkoutButton {
+    background-color: #2a7e7e; /* Цвет фона кнопки "Оформить заказ" */
+    color: white; /* Цвет текста кнопки "Оформить заказ" */
+}
+
+#checkoutButton:hover {
+    background-color: #64FFFF; 
+}
+
+#continueShoppingButton {
+    background-color: #2a7e7e; /* Цвет фона кнопки "Продолжить покупки" */
+    color: white; /* Цвет текста кнопки "Продолжить покупки" */
+}
+
+#continueShoppingButton:hover {
+    background-color: #64FFFF; /* Цвет фона кнопки "Продолжить покупки" */
+    color: white; /* Цвет текста кнопки "Продолжить покупки" */
+}
+
+
+
+/*модальное окно товара */
+.product-info-link {
+    cursor: pointer;
+}
+
+#productInfoTitle {
+    color: #12173E;
+}
+
+#productInfoImage {
+    height: 100%;
+    border: #64FFFF 2px solid;
+}
+
+#productInfoDescription {
+    max-width: 30%;;
+    margin-right: 10%;
+    height: 100%;
+    background-color: #12173eb2;
+    border: #64FFFF 2px solid;
+    padding: 0px 20px;
+}
+
+#productInfoPrice {
+    font-size: 50px;
+    margin-right: 10%;
+    padding: 0 20px;
+    font-weight: bolder;
+}
+
+#addToCartFromModal {
+    background-color: #2a7e7e;
+    color: white; 
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#addToCartFromModal:hover {
+    background-color: #64FFFF; 
+    color: white;
+}
+
+.top_2 {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 480px;
+}
+
+
+
+/*для блока с категриями */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #12173e6e;
+    width: 300px;
+}
+
+.category-dropdown img {
+    max-width: 300px;
+    transition: opacity 0.5s; /* Анимация исчезновения */
+}
+
+.category-dropdown-button {
+    background-color: #12173E;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+}
+
+.category-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #12173E;
+    width: 300px;
+    z-index: 1;
+    top: 0px; /* Высота кнопки */
+    left: 0;
+    transition: opacity 0.5s; /* Анимация появления */
+}
+
+.category-dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.category-dropdown-content a:hover {
+    background-color: #2a7e7e;
+}
+
+.category-dropdown:hover .category-dropdown-content {
+    display: block;
+}
+
+.category-dropdown:hover img {
+    opacity: 0; /* Исчезновение изображения при наведении */
+}
+.sidebar {
+    margin-right: 5%;
+}
+
+
+
+
+/* Для блока "Фильтры" */
+.filter {
+    margin-top: 20px;
+    background-color: #12173e6e;
+    color: white;
+    margin-bottom: 20px;  
+}
+
+.filter h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    background-color: #12173E;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.filter-section {
+    margin-bottom: 20px; 
+}
+
+.filter-section label {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.filter-section input[type="range"] {
+    width: 100%; 
+}
+
+.filter-section input[type="checkbox"],
+.filter-section input[type="radio"] {
+    margin-right: 10px; 
+}
+
+#applyFilters {
+    display: block; 
+    margin: 0 auto; 
+    width: 100%;
+    border: none;
+    padding: 20px 0;
+    background-color: #12173E;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#applyFilters:hover {
+    background-color: #2a7e7e;
+}
+
+.aa {
+    display: flex;
+}
+.top_3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*Для Инфо блоков */
+.info {
+    margin: 0 auto;
+    width: 90%;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ttle {
+    display: flex;
+    justify-content: space-around;
+    background-color: #12173E;
+}
+
+.QandA {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Qa {
+    width: 30%;
+    background-color: #12173E;
+    padding: 25px;
+    border-left: 5px #64FFFF solid ;
+    font-size: 30px;
+    height: 300px;
+}
+
+
+
+
+footer {
+    background: #12173E;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+.ac {
+    padding: 20px 0;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.aaa {
+    font-weight: 400;
+}
