@@ -649,11 +649,12 @@ footer p {
 /* моюильное меню */
 .mobile-menu-button {
     display: none; /* Hidden by default */
-    font-size: 30px;
+    font-size: 35px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    padding: 0;
 }
 
 .mobile-menu {
@@ -663,7 +664,6 @@ footer p {
     position: absolute;
     top: 120px; /* Adjust based on your header height */
     width: 100%;
-    padding: 10px 0;
     z-index: 1000;
 }
 
@@ -705,6 +705,7 @@ footer p {
         .header-container {
         display: flex;;
         align-items: center;
+        justify-content: space-between;
     }
 
     .main-nav {
