@@ -680,19 +680,25 @@ footer p {
     color: #12173E;
 }
 
-@media (max-width: 768px) {
 
-    .main-nav {
+@media (max-width: 768px) {
+    body {
+    font-family: "play";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url(IMG/7f88f5e86bfccd928022606df49f2a4e.jpg);
+    background-size: cover;
+}
+        .main-nav {
         display: none; /* Hide main nav */
     }
 
     .mobile-menu-button {
         display: block; /* Show mobile menu button */
     }
-}
-
-
-@media (max-width: 768px) {
     header {
         display: block;
     }
@@ -715,11 +721,31 @@ footer p {
     .logo h1 {
         font-size: 40px;
     }
-
+    .hero {
+        width: 100%;
+        height: 500px;
+    }
+    .hero-slide {
+        background: #000;
+    }
+    .hero img {
+        opacity: 0.8;
+    }
     .hero-text {
         font-size: 30px;
     }
 
+    .hero-text h2{
+        margin: 180px 0;
+    }
+    #cartButton {
+        height: 30px;
+        width: 30px;
+        background-size: cover;
+    }
+    .sidebar {
+        margin: 0 auto;
+    }
     .content {
         flex-direction: column;
         width: 100%;
@@ -731,12 +757,27 @@ footer p {
 
     .product-grid {
         flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .product-item {
+        padding: 0 0px;
         width: 100%;
-        margin: 10px 0;
+    }
+    
+    .category-dropdown {
+        width: 100%;
+       text-align: center;
+       padding-top: 5px;
+    }
+    .category-dropdown img {
+        width: 100%;
+    }
+    .category-dropdown-content {
+        width: 100%;
+    }
+    .category-dropdown-button {
+        width: 100%;
+    }
+    .product-item {
+        width: 85%;
+     margin: 10px auto; /* Центрируем карточки товаров */
     }
 
     .product-item img {
@@ -750,6 +791,32 @@ footer p {
 
     .top button {
         font-size: 20px;
+    }
+    .info {
+        display: flex;
+        width: 100%;
+        font-size: 10px;
+    }
+    .ttle {
+        display: block;
+        height: 620px;
+        width: 55%;
+    }
+    .aar {
+        height: 32%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .QandA {
+        display: block;
+    }
+    .Qa {
+        font-size: medium;
+        height: 150px;
+        margin-bottom: 10px;
+        width: 75%;
     }
 
     footer {
