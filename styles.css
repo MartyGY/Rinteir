@@ -646,6 +646,40 @@ footer p {
     font-weight: 400;
 }
 
+/* моюильное меню */
+.mobile-menu-button {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #12173E;
+    position: absolute;
+    top: 120px; /* Adjust based on your header height */
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid #64FFFF;
+}
+
+.mobile-menu a:hover {
+    background-color: #64FFFF;
+    color: #12173E;
+}
+
 @media (max-width: 768px) {
 
     .main-nav {
