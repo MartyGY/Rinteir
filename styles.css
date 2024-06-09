@@ -850,6 +850,7 @@ footer p {
     }
     .hero-text {
         font-size: 30px;
+        width: 60%;
     }
 
     .hero-text h2{
