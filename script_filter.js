@@ -14,9 +14,24 @@ document.getElementById('applyFilters').addEventListener('click', function() {
         let matchesRGB = selectedRGB.length > 0 ? selectedRGB.includes(productRGB) : true;
 
         if (matchesPrice && matchesColor && matchesRGB) {
-            product.style.display = 'block';
+            product.classList.remove('hidden');
         } else {
-            product.style.display = 'none';
+            product.classList.add('hidden');
         }
     });
+});
+
+document.getElementById('resetFilters').addEventListener('click', function() {
+    // Reset the price range
+    const priceInput = document.getElementById('price');
+    priceInput.value = 0;
+    document.getElementById('priceValue').innerText = priceInput.value;
+
+    // Reset the color radio buttons
+    const colorRadios = document.getElementsByName('color');
+    colorRadios.forEach(radio => radio.checked = false);
+
+    // Reset the RGB checkboxes
+    const rgbCheckboxes = document.getElementsByName('rgb');
+    rgbCheckboxes.forEach(checkbox => checkbox.checked = false);
 });
