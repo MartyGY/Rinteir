@@ -127,7 +127,13 @@ header {
     padding: 10px;
     border-radius: 5px;
     font-size: 50px;
-    width: 40%;
+    width: 50%;
+}
+
+.hero-text p {
+    margin-top: 200px;
+    width: 90%;
+    margin-left: 10%;
 }
 
 .hero-slide {
@@ -146,6 +152,7 @@ header {
     display: flex;
     width: 95%;
     margin: 0 auto;
+    padding: 0 50px;
 }
 
 
