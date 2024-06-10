@@ -657,12 +657,16 @@ header {
 }
 
 .Qa {
-    width: 30%;
+    width: 33.3%;
     background-color: #12173E;
     padding: 25px;
     border-left: 5px #64FFFF solid ;
     font-size: 30px;
     height: 300px;
+}
+.aar {
+    width: 33.3%;
+    text-align: center;
 }
 
 
