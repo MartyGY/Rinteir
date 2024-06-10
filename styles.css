@@ -176,12 +176,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 50px 20px 50px;
 }
 
 .product-item {
-    width: calc(32% - 20px);
+    width: calc(30% - 20px);
     height: 450px;
     background: linear-gradient(to bottom right, rgba(0, 173, 255, 0.7), rgba(15, 52, 96, 0.7));
     padding: 20px;
@@ -424,7 +424,6 @@ header {
 }
 
 #productInfoImage {
-    width: 50%;
     height: 100%;
     border: #64FFFF 2px solid;
 }
@@ -472,7 +471,7 @@ header {
 .top_03{
     display: flex;
     align-items: center;
-    justify-content: first baseline;
+    justify-content: baseline;
 }
 
 
@@ -524,12 +523,13 @@ header {
     color: #12173E;
 }
 
-.category-dropdown:hover .category-dropdown-content {
+.category-dropdown-button:hover + .category-dropdown-content,
+.category-dropdown-content:hover {
     display: block;
 }
 
-.category-dropdown:hover img {
-    opacity: 0; /* Исчезновение изображения при наведении */
+.category-dropdown-button:hover ~ img {
+    opacity: 0.5; /* Исчезновение изображения при наведении на кнопку */
 }
 .sidebar {
     margin-right: 5%;
@@ -1030,14 +1030,11 @@ footer p {
     width: 95%;
     margin: 5% auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     height: 90vh; /* Высота модального окна */
     overflow-y: auto; /* Прокрутка по вертикали */
 }
 
 .top_2 {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -1051,7 +1048,7 @@ footer p {
 #productInfoDescription {
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     padding-left: 20px;
     font-size: 18px;
     line-height: 1.2em;
@@ -1072,8 +1069,7 @@ footer p {
 
 .top_03 {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 10px; /* Дополнительный отступ сверху */
 }
 }
