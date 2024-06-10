@@ -1014,6 +1014,9 @@ footer p {
         display: flex;
         flex-direction: column;
     }
+    .top_03 {
+        margin-top: 10px;
+    }
 
     #productInfoImage {
         max-width: 50%;
