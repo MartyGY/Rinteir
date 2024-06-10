@@ -904,11 +904,6 @@ footer p {
         max-width: 100%;
     }
 
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-    }
-
     .top button {
         font-size: 20px;
     }
@@ -993,17 +988,16 @@ footer p {
         width: 95%;
         margin: 5% auto;
         padding: 20px;
-        text-align: center; /* Center align text */
+
     }
 
     .top_2 {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     #productInfoImage {
-        max-width: 70%;
+        max-width: 50%;
         height: auto;
         margin-bottom: 10px;
     }
@@ -1012,13 +1006,14 @@ footer p {
         max-width: 100%;
         margin-right: 0;
         margin-bottom: 10px;
-        height: auto;
-        padding: 1px;
-        font-size: 20px;
+        height: 400px;
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 0.9em;
     }
 
     #productInfoPrice {
-        font-size: 20px;
+        font-size: 30px;
         margin-right: 0;
         margin-bottom: 10px;
         padding: 5px;
@@ -1028,6 +1023,6 @@ footer p {
         width: 100%;
         font-size: 20px;
         padding: 15px;
-        margin-top: 10px;
+        margin-top: 250px;
     }
 }
