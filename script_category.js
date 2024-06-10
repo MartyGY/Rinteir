@@ -40,4 +40,17 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
+
+    // Handle "Все категории" click
+    const allCategoriesLink = document.querySelector('.category-dropdown-content a[data-category="Все категории"]');
+    allCategoriesLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        // Reset the displayed products to show all
+        productItems.forEach(function(item) {
+            item.style.display = "block";
+        });
+        // Update dropdown button text to "Выбрать категорию"
+        dropdownButton.textContent = "Выбрать категорию";
+        dropdownContent.classList.remove("show");
+    });
 });
