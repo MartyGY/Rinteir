@@ -127,7 +127,7 @@ header {
     padding: 10px;
     border-radius: 5px;
     font-size: 50px;
-    width: 30%;
+    width: 40%;
 }
 
 .hero-slide {
@@ -175,13 +175,13 @@ header {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
-    justify-content: space-between;
-    padding: 0px 50px 0px 50px;
+    gap: 8px;
+    justify-content: space-around;
+    padding: 20px 50px 20px 50px;
 }
 
 .product-item {
-    width: calc(31% - 20px);
+    width: calc(32% - 20px);
     height: 450px;
     background: linear-gradient(to bottom right, rgba(0, 173, 255, 0.7), rgba(15, 52, 96, 0.7));
     padding: 20px;
@@ -425,13 +425,14 @@ header {
 }
 
 #productInfoImage {
+    width: 40%;
     height: 100%;
     border: #64FFFF 2px solid;
 }
 
 #productInfoDescription {
-    max-width: 30%;;
-    margin-right: 10%;
+    width: 550px;
+    margin-right: 3%;
     height: 100%;
     background-color: #12173eb2;
     border: #64FFFF 2px solid;
@@ -439,9 +440,9 @@ header {
 }
 
 #productInfoPrice {
-    font-size: 50px;
-    margin-right: 10%;
-    padding: 0 20px;
+    font-size: 25px;
+    margin-right: 3%;
+    padding: 0 10px;
     font-weight: bolder;
 }
 
@@ -466,6 +467,11 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 480px;
+}
+.top_03{
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
 }
 
 
@@ -526,7 +532,7 @@ header {
 }
 .sidebar {
     margin-right: 5%;
-    margin-left: 1.5%;
+    margin-left: 1%;
 }
 
 
@@ -577,6 +583,9 @@ header {
 .filter-section input[type="radio"] {
     margin-right: 10px; 
     padding: 0;
+}
+.product-item.hidden {
+    display: none;
 }
 
 #applyFilters {
@@ -896,6 +905,53 @@ footer p {
     .category-dropdown-button {
         width: 100%;
     }
+    .category-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.category-dropdown-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.category-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.category-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.category-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on button click */
+.show {
+    display: block;
+}
+
+/* Hide all product items initially (for filtering) */
+.product-item {
+    display: none;
+}
     .product-item {
         width: 85%;
      margin: 10px auto; /* Центрируем карточки товаров */
