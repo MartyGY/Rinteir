@@ -444,6 +444,8 @@ header {
     margin-right: 3%;
     padding: 0 10px;
     font-weight: bolder;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #addToCartFromModal {
@@ -910,48 +912,8 @@ footer p {
     display: inline-block;
 }
 
-/* Dropdown button */
-.category-dropdown-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 
-/* Dropdown content (hidden by default) */
-.category-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-/* Links inside the dropdown */
-.category-dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.category-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show the dropdown menu on button click */
-.show {
-    display: block;
-}
-
-/* Hide all product items initially (for filtering) */
-.product-item {
-    display: none;
-}
     .product-item {
         width: 85%;
      margin: 10px auto; /* Центрируем карточки товаров */
@@ -1066,20 +1028,18 @@ footer p {
         height: 400px;
         padding-left: 20px;
         font-size: 18px;
-        line-height: 0.9em;
+        line-height: 1.2em;
     }
 
     #productInfoPrice {
         font-size: 30px;
         margin-right: 0;
-        margin-bottom: 10px;
-        padding: 5px;
+        margin-left: 20px;
     }
 
     #addToCartFromModal {
-        width: 100%;
+        width: 60%;
         font-size: 20px;
         padding: 15px;
-        margin-top: 250px;
     }
 }
