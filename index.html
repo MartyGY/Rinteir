@@ -1,1028 +1,442 @@
-@font-face { 
-  font-family: "Conthrax"; 
-  src: url("Fonts/conthrax-sb.ttf") format("truetype"); 
-  font-style: normal; 
-  font-weight: normal; 
-} 
-@font-face { 
-  font-family: "play"; 
-  src: url("Fonts/Play-Regular.ttf") format("truetype"); 
-  font-style: normal; 
-  font-weight: normal; 
-}
-
-
-body {
-    font-family: "play";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-    background-image: url(IMG/7f88f5e86bfccd928022606df49f2a4e.jpg);
-    background-size: cover;
-}
-
-header {
-    color: white;
-    background-color: #12173ea1;
-    font-weight: 200;
-}
-
-.header-container {
-    display: flex;
-    height: 120px;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin: 0 auto;
-}
-.logo {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 60px;
-    font-weight: 600;
-    font-family: "Conthrax";
-}
-.main-nav {
-    background-color: #12173E;
-    padding: 20px;
-    width: 60%;
-    height: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 600;
-    font-size: 25px;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
-}
-
-.cart img {
-    width: 50px;
-    height: 50px;
-}
-#cartButton {
-    border: none;
-    background: url(IMG/shopping-bag\ \(1\)\ 1.png);
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-}
-#cartButton:hover {
-    border: none;
-    background: url(IMG/shopping-bag.png);
-    background-size: cover;
-    height: 50px;
-    width: 50px;
-}
-
-.hero {
-    position: relative;
-    height: 800px;
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
-}
-
-.hero .active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.hero .inactive {
-    opacity: 0;
-    z-index: 0;
-}
-
-.hero-text {
-    text-align: right;
-    position: absolute;
-    top: 40%; 
-    right: 10%; 
-    transform: translateY(-50%);
-    color: white;
-    background: rgba(0, 0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 50px;
-    width: 40%;
-}
-
-.hero-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.hero-slide:not(.active) {
-    display: none;
-}
-
-.content {
-    display: flex;
-    width: 95%;
-    margin: 0 auto;
-}
-
-
-
-/*каталог */
-.main-content {
-    width: 100%;
-    color: white;
-}
-
-.products {
-    background-color: #12173e6e;
-    display: block;
-}
-
-.products h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #12173E;
-    height: 50px;
-    padding: 20px 0;
-    font-size: 40px;
-    margin: 0;
-}
-
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    justify-content: space-between;
-    padding: 0px 50px 0px 50px;
-}
-
-.product-item {
-    width: calc(31% - 20px);
-    height: 450px;
-    background: linear-gradient(to bottom right, rgba(0, 173, 255, 0.7), rgba(15, 52, 96, 0.7));
-    padding: 20px;
-    margin: 20px 0px 20px 0px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    background: linear-gradient(#64FFFF, #12173E);
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.product-item img {
-    max-width: 80%;
-    max-height: 50%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.product-item a {
-    margin: 10px 0;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 25px;
-    font-family: "Conthrax";
-}
-.product-item .price {
-    font-family: "Conthrax";
-    font-size: 30px;
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.add-to-cart {
-    font-size: 50px;
-    font-weight: 800;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    color: #64ffff7c;
-    transition: color 0.3s;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-}
-
-.add-to-cart:hover {
-    color: #64FFFF;
-}
-
-.price-add-to-cart {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-.info-product {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.493);
-}
-
-.product-item p {
-    margin: 10px 0;
-}
-
-.product-item button {
-    font-size: 80px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s; /* Добавлен переход для изменения цвета */
-    background-color: #00000000;
-    float: right;
-}
-
-
-
-
-.pagination {
-    background-color: #12173E;
-    padding: 20px;
-    text-align: center;
-}
-.pagination a {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: #a1a1a1;
-    font-weight: 600;
-    font-family: "Conthrax";
-    font-size: 20px;
-}
-.pagination a:hover {
-    color: white;
-}
-
-.pagination a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-/*для окна корзины */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    color: white;
-    font-size: larger;
-}
-
-.modal-content {
-    background: linear-gradient(#64ffffbd, #12173ea2);
-    margin: 15% auto;
-    padding: 10px 50px 50px 50px;
-    border: 5px solid #64FFFF;
-    width: 80%; 
-    display: block;
-}
-
-#cartItems {
-    display: flex;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px; /* Расстояние между товарами */
-    padding: 10px;
-    background-color: #12173ed3;
-}
-
-.cart-item-image {
-    max-width: 100px; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота */
-}
-
-.cart-item-info {
-    margin-left: 20px; /* Отступ от изображения */
-}
-
-.cart-item-info h4 {
-    margin: 0; /* Убираем отступы */
-}
-
-.cart-item-info p {
-    margin: 5px 0; /* Небольшой отступ для информации о товаре */
-}
-
-.close {
-    color: #12173E;
-    float: right;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #64FFFF;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-.top {
-    display: flex; /* Размещаем кнопки в строку */
-    justify-content: space-between; /* Равномерно распределяем пространство между кнопками */
-    align-items: center;
-}
-
-.cart-buttons {
-    display: flex; /* Размещаем кнопки в строку */
-    justify-content: space-between; /* Равномерно распределяем пространство между кнопками */
-    margin-top: 20px; /* Добавляем отступ сверху, если нужно */
-}
-
-.cart-buttons button {
-    padding: 10px 20px; /* Задаем отступы внутри кнопок */
-    font-size: 16px; /* Уменьшаем размер шрифта */
-    font-weight: 600; /* Делаем шрифт жирным */
-    border: none; /* Убираем границы кнопок */
-    cursor: pointer; /* Меняем курсор при наведении на кнопку */
-    border-radius: 5px; /* Скругляем углы кнопок */
-    transition: background-color 0.3s; /* Добавляем плавное изменение цвета при наведении */
-}
-#clearCartButton {
-    background-color: #2a7e7e; /* Цвет фона кнопки "Оформить заказ" */
-    color: white; /* Цвет текста кнопки "Оформить заказ" */
-}
-
-#clearCartButton:hover {
-    background-color: #64FFFF; 
-} 
-
-#checkoutButton {
-    background-color: #2a7e7e; /* Цвет фона кнопки "Оформить заказ" */
-    color: white; /* Цвет текста кнопки "Оформить заказ" */
-}
-
-#checkoutButton:hover {
-    background-color: #64FFFF; 
-}
-
-#continueShoppingButton {
-    background-color: #2a7e7e; /* Цвет фона кнопки "Продолжить покупки" */
-    color: white; /* Цвет текста кнопки "Продолжить покупки" */
-}
-
-#continueShoppingButton:hover {
-    background-color: #64FFFF; /* Цвет фона кнопки "Продолжить покупки" */
-    color: white; /* Цвет текста кнопки "Продолжить покупки" */
-}
-
-
-
-/*модальное окно товара */
-.product-info-link {
-    cursor: pointer;
-}
-
-#productInfoTitle {
-    color: #12173E;
-}
-
-#productInfoImage {
-    height: 100%;
-    border: #64FFFF 2px solid;
-}
-
-#productInfoDescription {
-    max-width: 30%;;
-    margin-right: 10%;
-    height: 100%;
-    background-color: #12173eb2;
-    border: #64FFFF 2px solid;
-    padding: 0px 20px;
-}
-
-#productInfoPrice {
-    font-size: 50px;
-    margin-right: 10%;
-    padding: 0 20px;
-    font-weight: bolder;
-}
-
-#addToCartFromModal {
-    background-color: #2a7e7e;
-    color: white; 
-    border: none;
-    padding: 20px;
-    font-size: 30px;
-}
-
-#addToCartFromModal:hover {
-    background-color: #64FFFF; 
-    color: white;
-}
-
-
-
-.top_2 {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 480px;
-}
-
-
-
-/*для блока с категриями */
-.category-dropdown {
-    position: relative;
-    display: inline-block;
-    background-color: #12173e6e;
-    width: 300px;
-}
-
-.category-dropdown img {
-    max-width: 300px;
-    transition: opacity 0.5s; /* Анимация исчезновения */
-}
-
-.category-dropdown-button {
-    background-color: #12173E;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 300px;
-    text-align: center;
-}
-
-.category-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #12173E;
-    width: 300px;
-    z-index: 1;
-    top: 0px; /* Высота кнопки */
-    left: 0;
-    transition: opacity 0.5s; /* Анимация появления */
-}
-
-.category-dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    color: white;
-}
-
-.category-dropdown-content a:hover {
-    background-color: #64FFFF;
-    color: #12173E;
-}
-
-.category-dropdown:hover .category-dropdown-content {
-    display: block;
-}
-
-.category-dropdown:hover img {
-    opacity: 0; /* Исчезновение изображения при наведении */
-}
-.sidebar {
-    margin-right: 5%;
-}
-
-
-
-
-/* Для блока "Фильтры" */
-.filter {
-    margin-top: 20px;
-    background-color: #12173e6e;
-    color: white;
-    margin-bottom: 20px;  
-}
-
-.filter h2 {
-    text-align: center; 
-    margin-bottom: 20px; 
-    background-color: #12173E;
-    width: 100%;
-    padding: 20px 0;
-}
-.filter h3 {
-    padding: 0 10px;
-}
-.topp {
-    display: flex;
-}
-.dr {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
-}
-.filter-section {
-    margin-bottom: 20px; 
-}
-
-.filter-section label {
-    display: block; 
-}
-
-.filter-section input[type="range"] {
-    width: 100%; 
-}
-
-.filter-section input[type="checkbox"] {
-    margin-right: 10px; 
-    padding: 0px;
-}
-.filter-section input[type="radio"] {
-    margin-right: 10px; 
-    padding: 0;
-}
-
-#applyFilters {
-    display: block; 
-    margin: 0 auto; 
-    width: 100%;
-    border: none;
-    padding: 20px 0;
-    background-color: #12173E;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bolder;
-}
-
-#applyFilters:hover {
-    background-color: #64FFFF;
-    color: #12173E;
-}
-
-.aa {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.top_3 {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-/*Для Инфо блоков */
-.info {
-    margin: 0 auto;
-    width: 90%;
-    color: white;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.ttle {
-    display: flex;
-    justify-content: space-around;
-    background-color: #12173E;
-}
-
-.QandA {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Qa {
-    width: 30%;
-    background-color: #12173E;
-    padding: 25px;
-    border-left: 5px #64FFFF solid ;
-    font-size: 30px;
-    height: 300px;
-}
-
-
-
-
-footer {
-    background: #12173E;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 230px;
-    display: flex;
-    align-items: center;
-}
-
-footer p {
-    margin: 0;
-}
-.ac {
-    padding: 20px 0;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.aaa {
-    font-weight: 400;
-}
-
-/* моюильное меню */
-.mobile-menu-button {
-    display: none; /* Hidden by default */
-    font-size: 35px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0;
-}
-
-.mobile-menu {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    background-color: #12173E;
-    position: absolute;
-    top: 120px; /* Adjust based on your header height */
-    width: 100%;
-    z-index: 1000;
-}
-
-.mobile-menu a {
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    text-align: center;
-    border-top: 1px solid #64FFFF;
-}
-
-.mobile-menu a:hover {
-    background-color: #64FFFF;
-    color: #12173E;
-}
-
-@media (min-width: 769px) and (max-width: 1400px) {
-    
-    
-    
-    header {
-        width: 100%;
-    }
-    
-    .header-container {
-        display: flex;;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .main-nav {
-        width: 40%;
-        padding: 10px;
-    }
-
-    .main-nav a {
-        font-size: 20px;
-        margin: 0 0.5rem;
-    }
-
-    .logo h1 {
-        font-size: 40px;
-    }
-
-
-    .hero {
-        width: 100%;
-        height: 500px;
-    }
-    .hero-slide {
-        background: #000;
-    }
-    .hero img {
-        opacity: 0.8;
-    }
-    .hero-text {
-        font-size: 30px;
-    }
-
-    .hero-text h2{
-        margin: 180px 0;
-    }
-
-    .content {
-        width: 100%;
-    }
-    .product-grid {
-        padding: 0px 10px 0px 10px;
-    }
-    .main-content {
-        width: 100%;
-    }
-    .category-dropdown {
-        width: 100%;
-       text-align: center;
-       padding-top: 5px;
-    }
-    .category-dropdown img {
-        width: 100%;
-    }
-    .category-dropdown-content {
-        width: 100%;
-    }
-    .category-dropdown-button {
-        width: 100%;
-    }
-
-    .product-item {
-        width: 28%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    .product-item img {
-        max-width: 70%;
-    }
-
-    .product-item a {
-        font-size: 20px;
-    }
-
-    .product-item .price {
-        font-size: 25px;
-    }
-    .sidebar {
-        margin-right: 1%;
-        width: 20%;
-    }
-}
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-    body {
-    font-family: "play";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-    background-image: url(IMG/7f88f5e86bfccd928022606df49f2a4e.jpg);
-    background-size: cover;
-}
-        .main-nav {
-        display: none; /* Hide main nav */
-    }
-
-    .mobile-menu-button {
-        display: block; /* Show mobile menu button */
-    }
-    header {
-        display: block;
-    }
-        .header-container {
-        display: flex;;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .main-nav {
-        width: 100%;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .main-nav a {
-        font-size: 20px;
-        margin: 0 0.5rem;
-    }
-
-    .logo h1 {
-        font-size: 40px;
-    }
-    .hero {
-        width: 100%;
-        height: 500px;
-    }
-    .hero-slide {
-        background: #000;
-    }
-    .hero img {
-        opacity: 0.8;
-    }
-    .hero-text {
-        font-size: 30px;
-        width: 80%;
-    }
-
-    .hero-text h2{
-        margin: 180px 0;
-    }
-    #cartButton {
-        height: 30px;
-        width: 30px;
-        background-size: cover;
-    }
-    .sidebar {
-        margin: 0 auto;
-    }
-    .content {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .products h2 {
-        font-size: 30px;
-    }
-
-    .product-grid {
-        flex-direction: column;
-        padding: 0 0px;
-        width: 100%;
-    }
-    
-    .category-dropdown {
-        width: 100%;
-       text-align: center;
-       padding-top: 5px;
-    }
-    .category-dropdown img {
-        width: 100%;
-    }
-    .category-dropdown-content {
-        width: 100%;
-    }
-    .category-dropdown-button {
-        width: 100%;
-    }
-    .product-item {
-        width: 85%;
-     margin: 10px auto; /* Центрируем карточки товаров */
-    }
-
-    .product-item img {
-        max-width: 100%;
-    }
-
-    .top button {
-        font-size: 20px;
-    }
-    .info {
-        display: flex;
-        width: 100%;
-        font-size: 10px;
-    }
-    .ttle {
-        display: block;
-        height: 620px;
-        width: 55%;
-    }
-    .aar {
-        height: 32%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .QandA {
-        display: block;
-    }
-    .Qa {
-        font-size: medium;
-        height: 150px;
-        margin-bottom: 10px;
-        width: 75%;
-    }
-
-    footer {
-        padding: 10px 0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 5% auto;
-        padding: 20px;
-    }
-
-    #cartItems {
-        flex-direction: column;
-    }
-
-    .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-right: 0;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .cart-item-image {
-        max-width: 80px;
-        margin-bottom: 10px;
-    }
-
-    .cart-item-info {
-        margin-left: 0;
-        text-align: left;
-    }
-
-    .cart-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cart-buttons button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 5% auto;
-        padding: 20px;
-
-    }
-
-    .top_2 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #productInfoImage {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    #productInfoDescription {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-        height: 400px;
-        padding-left: 20px;
-        font-size: 18px;
-        line-height: 0.9em;
-    }
-
-    #productInfoPrice {
-        font-size: 30px;
-        margin-right: 0;
-        margin-bottom: 10px;
-        padding: 5px;
-    }
-
-    #addToCartFromModal {
-        width: 100%;
-        font-size: 20px;
-        padding: 15px;
-        margin-top: 250px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>RINTEIR</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#">О нас</a>
+                <a href="#">Вопросы и ответы</a>
+                <a href="#">Преимущества</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <button id="cartButton"></button>
+
+            <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">О нас</a>
+            <a href="#faq">Вопросы и ответы</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+
+    </header>
+
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="top">
+                <h2>Корзина</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="cartItems">
+            </div>
+            <div id="cartTotal" class="cart-total">
+            </div>
+            <div class="cart-buttons">
+                <button id="clearCartButton">Очистить корзину</button>
+                <button id="continueShoppingButton">Продолжить покупки</button>
+                <button id="checkoutButton">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="productInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="productInfoTitle">Информация о товаре</h2>
+            <div class="top_2">
+                <img id="productInfoImage" src="" alt="Product Image">
+                <div id="productInfoDescription">Описание товара</div>
+                <p id="productInfoPrice"></p>
+            </div>
+            <button id="addToCartFromModal"> + Добавить в корзину</button>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="hero-slide active">
+            <img src="https://mobidevices.com/images/2019/01/Core-i9-9900T.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h2>Intel Core i9-14900K</h2>
+                <p>Новый уровень производительности по привлекательной цене</p>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="IMG/Gigabyte-Intel-Arc-A380-Arc-A310-Graphics-Cards-1-very_compressed-scale-4_00x-Custom.png"
+                alt="Hero Image 2" class="hero-image">
+            <div class="hero-text">
+                <h2>Видеокарты GIGABYTE</h2>
+                <p>Прокачайте свои игровые возможности</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=" content">
+        <aside class="sidebar">
+            <div class="category-dropdown">
+                <img src="IMG/s-l1600 копия.png" alt="">
+                <button class="category-dropdown-button">Выбрать категорию</button>
+                <div class="category-dropdown-content">
+                    <a href="#">Процессоры</a>
+                    <a href="#">Системы охлаждения</a>
+                    <a href="#">Видеокарты</a>
+                    <a href="#">Материнские платы</a>
+                    <a href="#">Оперативная память</a>
+                    <a href="#">Накопители</a>
+                    <a href="#">Флеш-накопители</a>
+                </div>
+            </div>
+            <section class="filter">
+                <h2>Фильтр</h2>
+                <div class="filter-section">
+                    <h3 for="price">Цена</h3>
+                    <input type="range" id="price" name="price" min="0" max="60000"
+                        oninput="document.getElementById('priceValue').innerText = this.value">
+                    <span id="priceValue">0</span> ₸
+                </div>
+                <div class="filter-section">
+                    <h3 for="color">Цвет</h3>
+                    <div class="topp">
+                        <div class="dr"><input type="radio" id="white" name="color" value="белый">
+                            <p for="white">Белый</p>
+                        </div>
+                        <div class="dr"><input type="radio" id="black" name="color" value="черный">
+                            <p for="black">Черный</з>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>RGB подсветка</h3>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-none" name="rgb" value="нет">
+                        <label for="rgb-none">Нет</label>
+                    </div>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-yes" name="rgb" value="есть">
+                        <label for="rgb-yes">Есть</label>
+                    </div>
+                    <div class="aa">
+                        <input type="checkbox" id="rgb-custom" name="rgb" value="настраиваемая">
+                        <label for="rgb-custom">Настраиваемая</label>
+                    </div>
+                </div>
+                <button id="applyFilters">Применить</button>
+            </section>
+        </aside>
+        <main class="main-content">
+            <section class="products">
+                <h2>Каталог</h2>
+                <div class="product-grid">
+                    <div class="product-item" data-title="ID-COOLING SE-914-XT-Basic" data-price="9287"
+                        data-color="черный" data-rgb="есть" data-image="IMG/Rectangle 40.png" data-features='[
+                                                            "Тип: Кулер для процессора",
+                                                            "Сокет: LGA1150, LGA1151, LGA1155, LGA1156, LGA1200, LGA2011, LGA2066, AM4",
+                                                            "Максимальный TDP процессора, Вт: 150",
+                                                            "Диаметр вентилятора, мм: 92",
+                                                            "Максимальная скорость вращения, обор./мин.: 2200",
+                                                            "Возможность регулирования оборотов: Есть",
+                                                            "Максимальный уровень шума, дБ: 25.8",
+                                                            "Высота кулера, мм: 127",
+                                                            "Коннектор: 4 pin",
+                                                            "Воздушный поток: 45.8 CFM"
+                                                        ]'>
+                        <img src="IMG/Rectangle 40.png" alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">ID-COOLING SE-914-XT-Basic</a></p>
+                            <p class="category"><a href="#"></a>Системы охлаждения</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">9 287 ₸</p>
+                            <button class="add-to-cart" data-price="9287" data-title="ID-COOLING SE-914-XT-Basic"
+                                data-image="IMG/Rectangle 40.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Intel Core i5 12400F OEM" data-price="59000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="IMG/Intel Core i5 12400F OEM.png" alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Intel Core i5 12400F OEM</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">59 000 ₸</p>
+                            <button class="add-to-cart" data-price="59000" data-title="Intel Core i5 12400F OEM"
+                                data-image="IMG/Intel Core i5 12400F OEM.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Intel Сore i7-11700F OEM" data-price="59000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://i0.wp.com/pcmarket.uz/wp-content/uploads/2021/04/INTEL-Core-i7-11700F-5034952245.png?fit=650%2C650&ssl=1"
+                            alt="Product 1">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Intel Сore i7-11700F OEM</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">99 000 ₸</p>
+                            <button class="add-to-cart" data-price="59000" data-title="Intel Сore i7-11700F OEM"
+                                data-image="https://i0.wp.com/pcmarket.uz/wp-content/uploads/2021/04/INTEL-Core-i7-11700F-5034952245.png?fit=650%2C650&ssl=1">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Kingston 32 4x8GB" data-price="34000" data-color="белый"
+                        data-rgb="нет">
+                        <img src="https://ddtech.mx/assets/uploads/518a6b00b54881147c17779df51b1208.png"
+                            alt="Product 2">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston 32 4x8GB</a></p>
+                            <p class="category"><a href="#"></a>Оперативная память</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">88 000 ₸</p>
+                            <button class="add-to-cart" data-price="34000" data-title="Kingston 32 4x8GB"
+                                data-image="https://ddtech.mx/assets/uploads/518a6b00b54881147c17779df51b1208.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="GIGABYTE GeForce RTX 4060 Ti" data-price="200000"
+                        data-color="черный" data-rgb="настраиваемая">
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/24270b88bee9db9541065889d1b5cf8b/Product/35327/Png"
+                            alt="Product 3">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE GeForce RTX 4060 Ti</a></p>
+                            <p class="category"><a href="#"></a>Видеокарты</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">230 000 ₸</p>
+                            <button class="add-to-cart" data-price="200000" data-title="GIGABYTE GeForce RTX 4060 Ti"
+                                data-image="https://static.gigabyte.com/StaticFile/Image/Global/24270b88bee9db9541065889d1b5cf8b/Product/35327/Png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Kingston SEDC500M/480G" data-price="50000" data-color="черный"
+                        data-rgb="нет">
+                        <img src="https://qwertyshop.ua/uploads/product/2019-7-3/magazin-qwertyshop-kingston-dc500m-480gb-sataiii-3d-tlc-sedc500m-480g.png"
+                            alt="Product 4">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston SEDC500M/480G</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">50 000 ₸</p>
+                            <button class="add-to-cart" data-price="50000" data-title="Kingston SEDC500M/480G"
+                                data-image="https://qwertyshop.ua/uploads/product/2019-7-3/magazin-qwertyshop-kingston-dc500m-480gb-sataiii-3d-tlc-sedc500m-480g.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="product-item" data-title="GIGABYTE H610M S2H" data-price="40000" data-color="черный"
+                        data-rgb="есть">
+                        <img src="https://www.gigabyte.com/Image/266/Product/34303/png" alt="Product 5">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE H610M S2H</a></p>
+                            <p class="category"><a href="#"></a>Материнские платы</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">41 000 ₸</p>
+                            <button class="add-to-cart" data-price="40000" data-title="GIGABYTE H610M S2H"
+                                data-image="https://www.gigabyte.com/Image/266/Product/34303/png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="SSD Netac NV3000 1000 Гб" data-price="35000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://i.otzovik.com/objects/b/2160000/2157136.png" alt="Product 6">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">SSD Netac NV3000 1000 Гб</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">35 000 ₸</p>
+                            <button class="add-to-cart" data-price="35000" data-title="SSD Netac NV3000 1000 Гб"
+                                data-image="https://i.otzovik.com/objects/b/2160000/2157136.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="GIGABYTE U4 UD" data-price="150000" data-color="серый"
+                        data-rgb="настраиваемая">
+                        <img src="https://pcscomputers.com.ph/wp-content/uploads/2021/12/1-6.png" alt="Product 7">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">GIGABYTE U4 UD</a></p>
+                            <p class="category"><a href="#"></a>Ноутбуки</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">260 000 ₸</p>
+                            <button class="add-to-cart" data-price="150000" data-title="GIGABYTE U4 UD"
+                                data-image="https://pcscomputers.com.ph/wp-content/uploads/2021/12/1-6.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="product-item" data-title="Kingston DTXM/256GB 256 Гб" data-price="12000"
+                        data-color="черный" data-rgb="есть">
+                        <img src="https://cdn-reichelt.de/bilder/web/xxl_ws/E300/KINGSTON_DTXM_256GB_03.png"
+                            alt="Product 8">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Kingston DTXM/256GB 256 Гб</a></p>
+                            <p class="category"><a href="#"></a>Флэш-накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">7 500 ₸</p>
+                            <button class="add-to-cart" data-price="12000" data-title="Kingston DTXM/256GB 256 Гб"
+                                data-image="https://cdn-reichelt.de/bilder/web/xxl_ws/E300/KINGSTON_DTXM_256GB_03.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title=" ARCTIC Liquid Freezer II - 240 A-RGB" data-price="8000"
+                        data-color="черный" data-rgb="нет">
+                        <img src="https://lh5.googleusercontent.com/proxy/wI3FUdpwz8qqe7ZP-hj2pI073Zsmt2GFhzB5XWydSRNj17-LQar14o-NaCpUehbFXQN4qt9T-_MnUVyJy9jrxh0diD_7LOdGzkwF5IutVAv28hFBCtReKlDPpjn7wHGx_bBq3A"
+                            alt="Product 9">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link"> ARCTIC Liquid Freezer II - 240 A-RGB</a></p>
+                            <p class="category"><a href="#"></a>Системы охлаждения</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">8 000 ₸</p>
+                            <button class="add-to-cart" data-price="8000"
+                                data-title=" ARCTIC Liquid Freezer II - 240 A-RGB"
+                                data-image="https://lh5.googleusercontent.com/proxy/wI3FUdpwz8qqe7ZP-hj2pI073Zsmt2GFhzB5XWydSRNj17-LQar14o-NaCpUehbFXQN4qt9T-_MnUVyJy9jrxh0diD_7LOdGzkwF5IutVAv28hFBCtReKlDPpjn7wHGx_bBq3A">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="Seagate Barracuda 2TB" data-price="18000" data-color="зеленый"
+                        data-rgb="нет">
+                        <img src="IMG/Seagate Barracuda 2TB.png" alt="Product 10">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Seagate Barracuda 2TB</a></p>
+                            <p class="category"><a href="#"></a>Накопители</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">18 000 ₸</p>
+                            <button class="add-to-cart" data-price="18000" data-title="Seagate Barracuda 2TB"
+                                data-image="IMG/Seagate Barracuda 2TB.png">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="product-item" data-title="Corsair HX850i" data-price="25000" data-color="черный"
+                        data-rgb="есть">
+                        <img src="IMG/Corsair HX850i.png" alt="Product 11">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">Corsair HX850i</a></p>
+                            <p class="category"><a href="#"></a>Блоки питания</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">25 000 ₸</p>
+                            <button class="add-to-cart" data-price="25000" data-title="Corsair HX850i"
+                                data-image="IMG/Corsair HX850i.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="AMD Ryzen 7 5800X" data-price="120000" data-color="черный"
+                        data-rgb="нет">
+                        <img src="IMG/AMD Ryzen 7 5800X.png" alt="Product 12">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">AMD Ryzen 7 5800X</a></p>
+                            <p class="category"><a href="#"></a>Процессоры</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">120 000 ₸</p>
+                            <button class="add-to-cart" data-price="120000" data-title="AMD Ryzen 7 5800X"
+                                data-image="IMG/AMD Ryzen 7 5800X.png">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-title="G.Skill Trident Z RGB 32GB" data-price="45000"
+                        data-color="черный" data-rgb="настраиваемая">
+                        <img src="IMG/G.Skill Trident Z RGB 32GB.png" alt="Product 13">
+                        <div class="info-product">
+                            <p><a href="#" class="product-info-link">G.Skill Trident Z RGB 32GB</a></p>
+                            <p class="category"><a href="#"></a>Оперативная память</p>
+                        </div>
+                        <div class="price-add-to-cart">
+                            <p class="price">45 000 ₸</p>
+                            <button class="add-to-cart" data-price="45000" data-title="G.Skill Trident Z RGB 32GB"
+                                data-image="IMG/G.Skill Trident Z RGB 32GB.png">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="pagination">
+                <a href="#">«</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">»</a>
+            </div>
+        </main>
+    </div>
+
+    <div class="info">
+        <div class="ttle">
+            <div class="aar">
+                <h1>Доставка</h1>
+            </div>
+            <div class="aar">
+                <h1>Оплата</h1>
+            </div>
+            <div class="aar">
+                <h1>Гарантия</h1>
+            </div>
+        </div>
+        <div class="QandA">
+            <div class="Qa ab">
+                <p>Доставка осуществяется по городу Алматы</p>
+                <p>с 10:00 до 18:00</p>
+            </div>
+            <div class="Qa">
+                <p>Оплата Kaspi QR</p>
+                <p>Оплата на товары выше 100 000 тг осуществляется заранее</p>
+            </div>
+            <div class="Qa">
+                <p>Гарантия магазина 2 недели на все виды товаров</p>
+                <p>Сроки гарантии производителя уточняйте в карточке товара</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ac">
+            <div class="logo">
+                <h1>RINTEIR</h1>
+            </div>
+            <div class="aaa">
+                <h2>Контакты: +7 777 777 7777</h2>
+            </div>
+            <div class="aaa">
+                <h2>Адрес: Дуйсенова 25
+                </h2>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script_cart.js"></script>
+    <script src="script_slidebar.js"></script>
+    <script src="script_modal_info-product.js"></script>
+    <script src="script_filter.js"></script>
+    <script src="mobile_menu.js"></script>
+
+
+</body>
+
+</html>
