@@ -1051,7 +1051,6 @@ footer p {
     margin-bottom: 50px;
     padding-left: 20px;
     font-size: 18px;
-    line-height: 1.2em;
     flex-grow: 1;
 }
 
@@ -1070,6 +1069,6 @@ footer p {
 .top_03 {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Дополнительный отступ сверху */
+    margin-top: 100px; /* Дополнительный отступ сверху */
 }
 }
