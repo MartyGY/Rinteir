@@ -318,8 +318,7 @@ header {
     display: block;
 }
 
-#cartItems {
-}
+
 
 .cart-item {
     display: flex;
@@ -960,11 +959,7 @@ footer p {
 
 
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 5% auto;
-        padding: 20px;
-    }
+
 
     #cartItems {
         flex-direction: column;
@@ -1009,47 +1004,54 @@ footer p {
 
 
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 5% auto;
-        padding: 20px;
+.modal-content {
+    width: 95%;
+    margin: 5% auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Высота модального окна */
+    overflow-y: auto; /* Прокрутка по вертикали */
+}
 
-    }
+.top_2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
-    .top_2 {
-        display: flex;
-        flex-direction: column;
-    }
-    .top_03 {
-        margin-top: 10px;
-    }
+#productInfoImage {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
-    #productInfoImage {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 10px;
-    }
+#productInfoDescription {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.2em;
+    flex-grow: 1;
+}
 
-    #productInfoDescription {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-        height: 600px;
-        padding-left: 20px;
-        font-size: 18px;
-        line-height: 1.2em;
-        display: block;
-    }
+#productInfoPrice {
+    font-size: 30px;
+    margin-right: 0;
+    margin-left: 20px;
+}
 
-    #productInfoPrice {
-        font-size: 30px;
-        margin-right: 0;
-        margin-left: 20px;
-    }
+#addToCartFromModal {
+    width: 60%;
+    font-size: 20px;
+    padding: 15px;
+}
 
-    #addToCartFromModal {
-        width: 60%;
-        font-size: 20px;
-        padding: 15px;
-    }
+.top_03 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px; /* Дополнительный отступ сверху */
+}
 }
