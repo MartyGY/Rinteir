@@ -966,6 +966,7 @@ footer p {
     }
     .QandA {
         display: block;
+        margin-right: 10px;
     }
     .Qa {
         font-size: medium;
