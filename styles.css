@@ -956,6 +956,7 @@ footer p {
         display: block;
         height: 620px;
         width: 55%;
+        margin-left: 10px;
     }
     .aar {
         height: 32%;
